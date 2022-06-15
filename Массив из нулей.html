@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+   const numbers = 10;
+        let arr = [];
+        let nulevoi_massive = [];
+        let count = 0;
+                for (let i = 0; i < numbers;i++) {
+                    arr[i] = +prompt(i + " элемент массива равен: ");
+                    if(isNaN(arr[i]) == true) {
+                        console.log("Вы ввели не число.");
+                        throw new Error;
+                    }
+                }
+        
+                 for (let i = 0; i < numbers; i++) {
+                    if(arr[i] == 0) {
+                nulevoi_massive[count] = i + 1;
+                count++;
+                    }
+                }
+
+        if (count == 0) {
+            alert("Нулевых элементов нет.");
+        } else {
+           for (let i = 0;i < count;i++) {
+                console.log("Нулевые элементы: " + nulevoi_massive[i] + " ");
+           }
+        }
+</script>
+<body>
+    
+</body>
+</html>
