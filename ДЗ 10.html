@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашняя работа</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,300;1,600;1,700&display=swap" rel="stylesheet">
+<style> body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    }
+</style>
+</head>
+<header>
+    <h1 align="center" > 
+        <font size="18" color="#1c2ac4"><b>Домашняя работа 10 тема, задача №1</b>
+        </h1> 
+</header>
+<body bgcolor= #e8d5ea>
+    
+    <script>
+        class Worker {
+            constructor(name, surname, rate, days) {
+                this.name = name;
+                this.surname = surname;
+                this.rate = rate;
+                this.days = days;
+            }
+            getSalary() {
+                return this.rate * this.days;
+            }
+        }
+
+        let worker1 = new Worker("Джек", "Воробей");
+        worker1.days = +prompt("Введите количество отработанных дней Джека")
+        worker1.rate = +prompt("Введите ставку за день работы")
+        while (worker1.days != Number(worker1.days) || worker1.days < 0 || worker1.rate < 0 ) {
+            worker1.days = +prompt("Введите кооректное значение! Количество дней должно быть числом, >= 0")
+            worker1.rate = +prompt("Введите кооректное значение! Ставка за день должна быть числом, >= 0")
+        };
+        
+        
+        console.log(worker1)
+        console.log(`За ${worker1.days} дней, со ставкой ${worker1.rate} рублей Джек получит ${worker1.getSalary(worker1.rate, worker1.days)} рублей`)
+        document.write((`<br\>За ${worker1.days} дней, со ставкой ${worker1.rate} рублей Джек получит ${worker1.getSalary(worker1.rate, worker1.days)} рублей <br\><br\>P.S. Вывод так же есть в консоли`)
+        )
+    </script>
+</body>
+</html>
